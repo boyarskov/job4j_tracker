@@ -12,9 +12,6 @@ public class Profession {
         this.education = education;
     }
 
-    public Profession() {
-    }
-
     public String getName() {
         System.out.println("Name: " + this.name);
         return name;
