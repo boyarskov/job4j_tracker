@@ -15,7 +15,7 @@ public class JSONReportTest {
                 + "}";
         String name = "Report's name";
         String body = "Report's body";
-        String result = new JSONReport().genetate(name, body);
+        String result = new JSONReport().generate(name, body);
         assertEquals(expected, result);
     }
 
@@ -28,7 +28,7 @@ public class JSONReportTest {
                 + "}";
         String name = "David Gilmour";
         String body = "Shine On You Crazy Diamond";
-        String result = new JSONReport().genetate(name, body);
+        String result = new JSONReport().generate(name, body);
         assertEquals(expected, result);
     }
 }
