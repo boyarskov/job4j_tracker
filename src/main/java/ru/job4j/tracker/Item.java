@@ -36,7 +36,6 @@ public class Item {
     }
 
     public LocalDateTime getCreated() {
-        System.out.println("Текущие дата и время ДО форматирования: " + created);
         return created;
     }
 }
