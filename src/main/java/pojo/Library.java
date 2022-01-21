@@ -27,7 +27,7 @@ public class Library {
         System.out.println("Show CleanCode");
         for (int i = 0; i < book.length; i++) {
             Book rsl = book[i];
-            if (rsl.getBook().equals("Clean code")) {
+            if  ("Clean code".equals(rsl.getBook())) {
             System.out.println("Book name: " + rsl.getBook() + " all pages: " + rsl.getPages());
         }
     }
