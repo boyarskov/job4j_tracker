@@ -1,7 +1,6 @@
 package ru.job4j.tracker;
 
 import java.time.LocalDateTime;
-import java.util.Formatter;
 import java.time.format.DateTimeFormatter;
 
 public class Item {
