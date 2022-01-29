@@ -11,28 +11,16 @@ public class Matches {
         while (count > 0) {
             System.out.println(">> Всего спичек осталось: " + count + " <<");
             String player = turn ? "Первый игрок" : "Второй игрок";
-            if (count >= 3) {
-                System.out.println(player + " введите число от 1 до 3: ");
-            } else {
-                System.out.println(player + " введите число от 1 до " + count);
-            }
+            System.out.println(player + " введите число от 1 до " + Math.min(3, count));
             int matches = Integer.parseInt(input.nextLine());
-            if (count > 3) {
-                if (matches >= 1 && matches <= 3) {
-                    turn = !turn;
-                    count = count - matches;
-                } else {
-                    System.out.println("Число должно быть от 1 до 3. Повторите попытку.");
-                }
+            if (matches >= 1 && matches <= Math.min(3, count)) {
+                turn = !turn;
+                count -= matches;
+                System.out.println("На столе осталось " + count + " спичек");
             } else {
-                if (matches >= 1 && matches <= count) {
-                    turn = !turn;
-                    count = count - matches;
-                } else {
-                    System.out.println("Число должно быть от 1 до " + count + " Повторите попытку.");
-                }
+                System.out.println("Число должно быть от 1 до " + Math.min(3, count) + ". Повторите попытку.");
             }
-        }
+            }
         if (!turn) {
             System.out.println("Выйграл первый игрок");
         } else {
