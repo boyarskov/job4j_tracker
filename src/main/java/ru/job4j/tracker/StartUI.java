@@ -1,9 +1,20 @@
 package ru.job4j.tracker;
 
-public class StartUI extends Item {
+import java.util.Scanner;
+
+public class StartUI {
+
+    public void init(Scanner scanner, Tracker tracker) {
+
+    }
+
+    private void showMenu() {
+
+    }
 
     public static void main(String[] args) {
-        Item item = new Item(23, "Data");
-        System.out.println(item);
+        Scanner scanner = new Scanner(System.in);
+        Tracker tracker = new Tracker();
+        new StartUI().init(scanner, tracker);
     }
 }
