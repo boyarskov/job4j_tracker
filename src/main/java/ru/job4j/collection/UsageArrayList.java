@@ -10,7 +10,7 @@ public class UsageArrayList {
         names.add("Ivan");
         names.add("Stepan");
 
-        for (Object value : names) {
+        for (String value : names) {
             System.out.println(value);
         }
     }
