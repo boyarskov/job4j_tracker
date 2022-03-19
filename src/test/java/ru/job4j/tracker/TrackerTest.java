@@ -5,6 +5,7 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.IsNull.nullValue;
+import java.util.List;
 
 public class TrackerTest {
 
@@ -34,7 +35,7 @@ public class TrackerTest {
         Item second = new Item("Second");
         tracker.add(first);
         tracker.add(second);
-        Item result = tracker.findAll()[0];
+        Item result = tracker.findAll().get(0);
         assertThat(result.getName(), is(first.getName()));
     }
 
@@ -48,7 +49,7 @@ public class TrackerTest {
         tracker.add(new Item("First"));
         tracker.add(new Item("Second"));
         tracker.add(new Item("First"));
-        Item[] result = tracker.findByName(first.getName());
+        Item[] result = tracker.findByName(first.getName()).toArray(new Item[0]);
         assertThat(result.length, is(3));
     }
 
@@ -62,8 +63,8 @@ public class TrackerTest {
         tracker.add(new Item("First"));
         tracker.add(new Item("Second"));
         tracker.add(new Item("First"));
-        Item[] result = tracker.findByName(second.getName());
-        assertThat(result[1].getName(), is(second.getName()));
+        List<Item> result = tracker.findByName(second.getName());
+        assertThat(result.get(0).getName(), is(second.getName()));
     }
 
     @Test
