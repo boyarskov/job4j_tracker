@@ -5,7 +5,10 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.IsNull.nullValue;
+
+import java.util.Arrays;
 import java.util.List;
+import java.util.Collections;
 
 public class TrackerTest {
 
@@ -89,5 +92,41 @@ public class TrackerTest {
         int id = bug.getId();
         tracker.delete(id);
         assertThat(tracker.findById(id), is(nullValue()));
+    }
+
+    @Test
+    public void sortNameUp() {
+        List<Item> items = Arrays.asList(
+               new Item("Maxim"),
+                new Item("Pavel"),
+                new Item("Artem"),
+                new Item("Boris")
+        );
+        Collections.sort(items, new ItemAscByName());
+        List<Item> expected = Arrays.asList(
+                new Item("Artem"),
+                new Item("Boris"),
+                new Item("Maxim"),
+                new Item("Pavel")
+        );
+        assertThat((items.toString()), is(expected.toString()));
+    }
+
+    @Test
+    public void sortNameDown() {
+        List<Item> items = Arrays.asList(
+                new Item("Maxim"),
+                new Item("Pavel"),
+                new Item("Artem"),
+                new Item("Boris")
+        );
+        Collections.sort(items, new ItemDescByName());
+        List<Item> expected = Arrays.asList(
+                new Item("Pavel"),
+                new Item("Maxim"),
+                new Item("Boris"),
+                new Item("Artem")
+        );
+        assertThat(items.toString(), is(expected.toString()));
     }
 }
