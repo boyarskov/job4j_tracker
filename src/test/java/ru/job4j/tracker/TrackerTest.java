@@ -102,14 +102,14 @@ public class TrackerTest {
                 new Item("Artem"),
                 new Item("Boris")
         );
-        Collections.sort(items, new ItemAscByName());
         List<Item> expected = Arrays.asList(
                 new Item("Artem"),
                 new Item("Boris"),
                 new Item("Maxim"),
                 new Item("Pavel")
         );
-        assertThat((items.toString()), is(expected.toString()));
+        Collections.sort(items, new ItemAscByName());
+        assertThat(items, is(expected));
     }
 
     @Test
@@ -127,6 +127,6 @@ public class TrackerTest {
                 new Item("Boris"),
                 new Item("Artem")
         );
-        assertThat(items.toString(), is(expected.toString()));
+        assertThat(items, is(expected));
     }
 }
