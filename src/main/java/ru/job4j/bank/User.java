@@ -2,7 +2,16 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описывает модель пользователя банка
+ * реализует get/set и переопределяет equals, hashCode
+ * @author Artem Boyarskov
+ * @version 1.0
+ */
 public class User {
+    /**
+     *  Модель содержит поля: номер паспорта и ФИО
+     */
     private String passport;
     private String username;
 
@@ -27,6 +36,9 @@ public class User {
         this.username = username;
     }
 
+    /**
+     * Переопределение equals и hashCode
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {

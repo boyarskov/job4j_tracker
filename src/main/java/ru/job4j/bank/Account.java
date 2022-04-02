@@ -2,7 +2,16 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описывает модели банковского счета
+ * реализует get/set и переопределяет equals, hashCode
+ * @author Artem Boyarskov
+ * @version 1.0
+ */
 public class Account {
+    /**
+     * Класс содержит поля баланс и реквизиты
+     */
     private String requisite;
     private double balance;
 
@@ -27,6 +36,9 @@ public class Account {
         this.balance = balance;
     }
 
+    /**
+     * Переопределение equals и hashCode
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
