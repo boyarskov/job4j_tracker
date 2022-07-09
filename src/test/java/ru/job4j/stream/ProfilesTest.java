@@ -1,9 +1,6 @@
-package ru.job4j.steam;
+package ru.job4j.stream;
 
 import org.junit.Test;
-import ru.job4j.stream.Address;
-import ru.job4j.stream.Profile;
-import ru.job4j.stream.Profiles;
 
 import java.util.Arrays;
 import java.util.List;

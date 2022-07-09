@@ -1,9 +1,6 @@
-package ru.job4j.steam.optional;
+package ru.job4j.stream.optional;
 
 import org.junit.Test;
-import ru.job4j.stream.optional.College;
-import ru.job4j.stream.optional.Student;
-import ru.job4j.stream.optional.Subject;
 
 import java.util.Map;
 import java.util.Optional;

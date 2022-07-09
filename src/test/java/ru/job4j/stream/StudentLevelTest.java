@@ -1,8 +1,6 @@
-package ru.job4j.steam;
+package ru.job4j.stream;
 
 import org.junit.Test;
-import ru.job4j.stream.Student;
-import ru.job4j.stream.StudentLevel;
 
 import java.util.ArrayList;
 import java.util.List;

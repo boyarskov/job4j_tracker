@@ -1,8 +1,6 @@
-package ru.job4j.steam;
+package ru.job4j.stream;
 
 import org.junit.Test;
-import ru.job4j.stream.ListToMap;
-import ru.job4j.stream.Student;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
