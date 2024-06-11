@@ -1,6 +1,6 @@
-package ru.job4j.record;
+package ru.job4j.condition;
 
-public class Test {
+public class StringRunner {
     public static void main(String[] args) {
         String idea = "I like Java!";
         System.out.println(idea);
