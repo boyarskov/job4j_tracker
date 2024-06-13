@@ -11,6 +11,7 @@ public class Local {
                 System.out.println(name + " " + surname);
             }
         }
+
         FullMane fullMane = new FullMane();
         fullMane.printFullName();
     }

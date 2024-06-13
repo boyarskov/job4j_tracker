@@ -9,11 +9,10 @@ public class Main {
         boolean result = true;
 
         for (int i = 0; i < data.size(); i++) {
-            if (data.get(i)%2 != 0) {
+            if (data.get(i) % 2 != 0) {
                 result = false;
             }
         }
-
 
         System.out.println(result);
     }
