@@ -14,6 +14,5 @@ public class VarArgs {
         System.out.println(text("aaa"));
         System.out.println(text("aaa", "bbb", "ccc"));
         System.out.println(text("aaa", "bbb", "ccc", "ddd", "eee"));
-        System.out.println("test");
     }
 }
