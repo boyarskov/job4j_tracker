@@ -1,6 +1,5 @@
 package ru.job4j.queue;
 
-import java.util.LinkedList;
 import java.util.Queue;
 
 public class AppleStore {
