@@ -18,11 +18,6 @@ public class SimpleStringEncoder {
                 counter = 1;
             }
         }
-
-            if (counter == 1) {
-                return result + symbol;
-            } else {
-                return result + symbol + counter;
-            }
+        return counter == 1 ? result + symbol : result + symbol + counter;
         }
 }
