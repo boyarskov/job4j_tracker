@@ -31,11 +31,11 @@ public class AnalyzeByMap {
     }
 
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
-        Map<String, Integer> mapa = new LinkedHashMap<>();
+               Map<String, Integer> mapa = new LinkedHashMap<>();
         List<Label> rsl = new ArrayList<>();
         for (Pupil pupilZ : pupils) {
             for (Subject subjectZ : pupilZ.subject()) {
-                mapa.put(subjectZ.name(), mapa.getOrDefault(subjectZ.name(), 0) + subjectZ.score());
+                mapa.merge(subjectZ.name(), subjectZ.score(), Integer::sum);
             }
         }
         for (String name : mapa.keySet()) {
@@ -62,7 +62,7 @@ public class AnalyzeByMap {
         List<Label> rsl = new ArrayList<>();
         for (Pupil pupilZ : pupils) {
             for (Subject subjectZ : pupilZ.subject()) {
-                mapa.put(subjectZ.name(), mapa.getOrDefault(subjectZ.name(), 0) + subjectZ.score());
+                mapa.merge(subjectZ.name(), subjectZ.score(), Integer::sum);
             }
         }
         for (String name : mapa.keySet()) {
